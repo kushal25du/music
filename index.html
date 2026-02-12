@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advanced Media Player</title>
+
+<!-- Linking external CSS -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<!-- ===============================
+     LEFT PANEL UI
+     =============================== -->
+<div class="left">
+
+<h2>MUSIC PLAYER</h2>
+
+<h4>Playlist Name</h4>
+
+<!-- User can rename playlist -->
+<input type="text" id="playlistInput" oninput="updatePlaylistName()">
+
+<h3 id="playlistTitle">My Playlist</h3>
+
+<!-- Rotated order based on current song -->
+<h4>Current Order</h4>
+<div id="leftQueue"></div>
+
+</div>
+
+<!-- ===============================
+     RIGHT PANEL UI
+     =============================== -->
+<div class="right">
+
+<h3>Upload MP3 / MP4</h3>
+
+<!-- File input accepts multiple audio/video files -->
+<input type="file" id="fileInput" accept="audio/mp3,video/mp4" multiple>
+
+<div class="player-box">
+
+<!-- Audio Player -->
+<audio id="audioPlayer" controls style="display:none;"></audio>
+
+<!-- Video Player -->
+<video id="videoPlayer" controls style="display:none;"></video>
+
+</div>
+
+<!-- Media Controls -->
+<div class="controls">
+<button onclick="previous()">⏮ Previous</button>
+<button onclick="play()">▶ Play</button>
+<button onclick="pause()">⏸ Pause</button>
+<button onclick="stop()">⏹ Stop</button>
+<button onclick="next()">⏭ Next</button>
+</div>
+
+<!-- Queue Display -->
+<div class="queue" id="queue"></div>
+
+</div>
+</div>
+
+<!-- Linking external JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
