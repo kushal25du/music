@@ -1,0 +1,141 @@
+/* ===============================
+   GLOBAL STYLING
+=============================== */
+
+body{
+    margin:0;
+    font-family: Arial;
+    background:#121212;
+    color:white;
+}
+
+/* Flex layout */
+.container{
+    display:flex;
+    height:100vh;
+}
+
+/* Left panel */
+.left{
+    width:25%;
+    background:#1e1e1e;
+    padding:20px;
+    overflow-y:auto;
+}
+
+/* Right panel */
+.right{
+    width:75%;
+    padding:20px;
+    overflow-y:auto;
+}
+
+/* Text input */
+input{
+    width:90%;
+    padding:8px;
+    border:none;
+    border-radius:5px;
+}
+
+/* Player spacing */
+.player-box{
+    margin-top:20px;
+}
+
+/* Control buttons */
+.controls{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.controls button{
+    padding:10px 15px;
+    margin:5px;
+    border:none;
+    border-radius:6px;
+    background:#3a3a3a;
+    color:white;
+    cursor:pointer;
+    flex:1 1 120px;
+}
+
+.controls button:hover{
+    background:#5a5a5a;
+}
+
+/* Queue styling */
+.queue{
+    margin-top:20px;
+    background:#1e1e1e;
+    padding:15px;
+    border-radius:8px;
+    max-height:350px;
+    overflow-y:auto;
+}
+
+.queue-item{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    padding:8px;
+    border-bottom:1px solid #333;
+}
+
+/* Highlight current song */
+.active{
+    background:#2d2d2d;
+}
+
+.queue-item button{
+    margin-left:5px;
+    padding:5px 8px;
+    font-size:12px;
+}
+
+/* Media player styling */
+video,audio{
+    width:100%;
+    max-height:300px;
+    border-radius:8px;
+}
+
+/* Left panel playlist */
+.left-song{
+    padding:6px;
+    border-bottom:1px solid #333;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+=============================== */
+
+@media(max-width:900px){
+
+.container{
+    flex-direction:column;
+    height:auto;
+}
+
+.left, .right{
+    width:100%;
+}
+
+}
+
+@media(max-width:600px){
+
+.controls button{
+    flex:1 1 100%;
+}
+
+input{
+    width:100%;
+}
+
+.queue{
+    max-height:250px;
+}
+
+}
